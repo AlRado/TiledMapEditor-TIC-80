@@ -1,15 +1,8 @@
-var SIZE = 32640;
-var fs = require('fs');
-var mapWithoutParsing = fs.readFileSync('./world_map.json');
-var mapWithParsing = JSON.parse(mapWithoutParsing);
-var rawData = mapWithParsing.layers[0].data;
+const fs = require('fs'),
+      SIZE = 32640
+let rawData = require('./world_map.json').layers[0].data;
 
-var data = [];
-for (var i = 0; i < rawData.length; i++) {
-    var ix = rawData[i] - 1;
-    data[i] = ix < 0 ? 0 : ix;
-}
+let data = Array.from(rawData).map(e => Math.min(e - 1, 0));
 data.length = SIZE;
 
-var buffer = Buffer.from(data)
-fs.writeFileSync('./world_map.map', buffer)
+fs.writeFileSync('./world_map.map', Buffer.from(data))

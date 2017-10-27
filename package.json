@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/AlRado/TiledMapEditor-TIC-80/issues"
   },
-  "homepage": "https://github.com/AlRado/TiledMapEditor-TIC-80#readme"
+  "homepage": "https://github.com/AlRado/TiledMapEditor-TIC-80#readme",
+  "dependencies": {
+    "yargs": "^10.0.3"
+  }
 }

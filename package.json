@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/AlRado/TiledMapEditor-TIC-80#readme",
   "dependencies": {
+    "xml2js": "^0.4.19",
     "yargs": "^10.0.3"
   }
 }

@@ -24,6 +24,7 @@
     "map"
   ],
   "author": "AlRado",
+  "contributors": ["darkhole"],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/AlRado/TiledMapEditor-TIC-80/issues"

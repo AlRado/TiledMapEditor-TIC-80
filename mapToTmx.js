@@ -4,7 +4,7 @@ var fs = require('fs'),
     xml2js = require('xml2js');
 
 fs.readFile('./' + MAP_NAME + '.map', function (err, rawData) {
-    fs.readFile('./default/default_map.tmx', function (err, data) {
+    fs.readFile('./default_data/default_map.tmx', function (err, data) {
         let parser = new xml2js.Parser();
         parser.parseString(data, function (err, result) {
             let tiles = result.map.layer[0].data[0].tile;
@@ -20,4 +20,3 @@ fs.readFile('./' + MAP_NAME + '.map', function (err, rawData) {
         });
     });
 });
-

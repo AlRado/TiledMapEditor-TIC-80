@@ -16,7 +16,7 @@ const fs = require('fs'),
               return;
             }
             let tiles = result.map.layer[0].data[0].tile;
-            let dataView = new DataView(str);
+            let dataView = new DataView(Buffer.from(str, 'utf8').buffer);
             for (var i = 0; i < SIZE; i++) {
               tiles[i] = { '$': { gid: (dataView.getInt8(i) + 1).toString() } }
             }

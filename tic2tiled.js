@@ -1,3 +1,4 @@
+/** @module tic2tiled */
 const fs = require('fs'),
   xml2js = require('xml2js'),
   parser = new xml2js.Parser(),
@@ -41,6 +42,12 @@ const fs = require('fs'),
   };
 let string, typeIn, typeOut, readed;
 module.exports = {
+  /**
+   *  Reads string for convertion from file
+   *  @param {string} filename
+   *  @see {@link string}
+   *  @returns {this}
+   */
   file: function file(filename) {
     readed = new Promise((res, rej) => {
       fs.readFile(filename, 'utf-8', (err, data) => {
@@ -50,10 +57,22 @@ module.exports = {
     })
     return this;
   },
+  /**
+   *  Uses string from arguments for convertation
+   *  @param {string} string
+   *  @see {@link file}
+   *  @returns {this}
+   */
   string: function string(str) {
     string = (typeof str == 'string') ? str : str.toString();
     return this;
   },
+  /**
+   *  Set type from which need convert
+   *  @param {string} type
+   *  @see {@link to}
+   *  @returns {this}
+   */
   from: function from(type) {
     typeIn = (typeof type == 'string') ? type : type.toString();
     if (
@@ -65,6 +84,12 @@ module.exports = {
     }
     return this;
   },
+  /**
+   *  Set type to which need convert
+   *  @param {string} type
+   *  @see {@link from}
+   *  @returns {this}
+   */
   to: function to(type) {
     typeOut = (typeof type == 'string') ? type : type.toString();
     if (
@@ -76,6 +101,13 @@ module.exports = {
     }
     return this;
   },
+  /**
+   *  Converts and write result to file
+   *  @param {string} filename
+   *  @see {@link file}
+   *  @see {@link string}
+   *  @returns {Promise} Promise which resolved after writing in file
+   */
   out: function out(filename) {
     if (typeof string == 'string') {
       return new Promise((res, rej) => {
@@ -83,7 +115,7 @@ module.exports = {
           if (err) rej(err);
           else res();
         })
-        delete string;
+        string = void 0;
       });
     } else {
       return new Promise((res, rej) => {

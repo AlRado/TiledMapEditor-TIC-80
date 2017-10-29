@@ -8,7 +8,7 @@
     "start": "."
   },
   "bin": {
-    "tic2tiled": "./parse_tiled_map.js"
+    "tic2tiled": "./cli.js"
   },
   "repository": {
     "type": "git",

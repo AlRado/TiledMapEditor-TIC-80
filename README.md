@@ -1,5 +1,5 @@
 # TiledMapEditor-TIC-80
-Converter from TiledMapEditor(.json) to TIC-80(.map)
+Converter from TiledMapEditor(.tmx) to TIC-80(.map)
 
 ![](resources/export_tiled_map.gif)
 

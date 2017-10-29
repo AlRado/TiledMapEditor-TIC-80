@@ -13,4 +13,4 @@ const path = require('path'),
 
 require('./tic2tiled').file(`./${fileIn}`).from(fileInExt).to(fileOutExt).out(`./${fileOut}`);
 
-console.log(`${fileIn} converted to ${fileOut}`);
+console.log(`${fileIn} converted to ${fileOut}`); 

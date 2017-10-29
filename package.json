@@ -1,14 +1,14 @@
 {
-  "name": "tic-tiled",
-  "version": "1.0.2",
-  "description": "A simple commandline converter from TiledMapEditor JSON to TIC-80 .map",
-  "main": "parse_tiled_map.js",
+  "name": "tic2tiled",
+  "version": "0.0.1",
+  "description": "A simple commandline converter TiledMapEditor -> TIC-80 .map and TIC-80 .map -> TiledMapEditor",
+  "main": "tic2tiled.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "."
   },
   "bin": {
-    "tic-tiled": "./parse_tiled_map.js"
+    "tic2tiled": "./cli.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +21,17 @@
     "TIC-80",
     "tiled",
     "TiledMapEditor",
-    "map",
-    "json"
+    "map"
   ],
   "author": "AlRado",
+  "contributors": ["darkhole"],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/AlRado/TiledMapEditor-TIC-80/issues"
   },
   "homepage": "https://github.com/AlRado/TiledMapEditor-TIC-80#readme",
   "dependencies": {
+    "xml2js": "^0.4.19",
     "yargs": "^10.0.3"
   }
 }

@@ -6,7 +6,8 @@ const fs = require('fs'),
   converts = {
     'map->tmx': function (str) {
       return new Promise((res, rej) => {
-        fs.readFile('default_data/default_map.tmx', 'utf-8', (err, data) => {
+        fs.writeFileSync(`./tileset.tsx`, fs.readFileSync(`${__dirname}/default_data/tileset.tsx`));
+        fs.readFile(`${__dirname}/default_data/default_map.tmx`, 'utf-8', (err, data) => {
           if (err) {
             rej(err);
             return;

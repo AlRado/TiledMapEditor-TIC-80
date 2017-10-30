@@ -1,6 +1,6 @@
 {
   "name": "tic2tiled",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple commandline converter TiledMapEditor(.tmx) -> TIC-80(.map) and TIC-80(.map) -> TiledMapEditor(.tmx)",
   "main": "tic2tiled.js",
   "scripts": {

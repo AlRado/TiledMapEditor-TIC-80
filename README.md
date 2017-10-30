@@ -1,5 +1,5 @@
 # TiledMapEditor-TIC-80
-Converter from TiledMapEditor(.tmx) to TIC-80(.map)
+A simple commandline converter TiledMapEditor(.tmx) -> TIC-80(.map) and TIC-80(.map) -> TiledMapEditor(.tmx)
 
 ![](resources/export_tiled_map.gif)
 
